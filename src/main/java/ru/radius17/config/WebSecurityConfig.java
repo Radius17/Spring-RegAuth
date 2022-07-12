@@ -1,4 +1,4 @@
-package com.boots.config;
+package ru.radius17.config;
 
 import com.boots.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

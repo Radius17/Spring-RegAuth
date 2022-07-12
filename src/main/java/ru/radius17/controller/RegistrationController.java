@@ -1,4 +1,4 @@
-package com.boots.controller;
+package ru.radius17.controller;
 
 import com.boots.entity.User;
 import com.boots.service.UserService;

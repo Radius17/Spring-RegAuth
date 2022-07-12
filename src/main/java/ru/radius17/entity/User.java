@@ -1,4 +1,4 @@
-package com.boots.entity;
+package ru.radius17.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

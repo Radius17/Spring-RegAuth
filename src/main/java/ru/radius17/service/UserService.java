@@ -1,8 +1,8 @@
-package com.boots.service;
+package ru.radius17.service;
 
-import com.boots.entity.Role;
-import com.boots.entity.User;
-import com.boots.repository.RoleRepository;
+import ru.radius17.entity.Role;
+import ru.radius17.entity.User;
+import ru.radius17.repository.RoleRepository;
 import com.boots.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
