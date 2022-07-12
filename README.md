@@ -1,2 +1,2 @@
-# Spring-RegAuth
-Spring registration and authentication.
+# SpringBoot-RegAuth
+SpringBoot registration and authentication.
