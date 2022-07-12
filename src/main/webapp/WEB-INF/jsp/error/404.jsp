@@ -8,13 +8,10 @@
 <body>
 
 <h2>404 - Resource not found</h2>
+<p>The requested resource was not found; template - specific</p>
 
-<p>
-The requested resource was not found; template - specific
-</p>
-
-<p th:text="${error}">Error Info</p>
-<p th:text="${status}">Status</p>
+<p>Error Info: </p>
+<p>Status: </p>
 
 </body>
 </html>

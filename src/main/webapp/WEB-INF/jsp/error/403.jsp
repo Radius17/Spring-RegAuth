@@ -8,13 +8,9 @@
 <body>
 
 <h2>403 - Forbidden</h2>
-
-<p>
-You are not allowed to access this page
-</p>
-
-<p th:text="${error}">Error Info</p>
-<p th:text="${status}">Status</p>
+<p>You are not allowed to access this page</p>
+<p>Error Info: </p>
+<p>Status: </p>
 
 </body>
 </html>

@@ -14,12 +14,17 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Size(min=2, message = "Не меньше 5 знаков")
+    @Size(min=2, message = "Не меньше 2 знаков")
     private String username;
-    @Size(min=2, message = "Не меньше 5 знаков")
+    @Size(min=2, message = "Не меньше 2 знаков")
     private String password;
     @Transient
     private String passwordConfirm;
+    @Size(min=2, message = "Не меньше 2 знаков")
+    private String nickname;
+    private String phone;
+    private String email;
+    private String comments;
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
@@ -83,6 +88,38 @@ public class User implements UserDetails {
 
     public void setPasswordConfirm(String passwordConfirm) {
         this.passwordConfirm = passwordConfirm;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
     public Set<Role> getRoles() {
