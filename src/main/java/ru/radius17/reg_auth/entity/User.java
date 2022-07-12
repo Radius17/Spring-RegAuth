@@ -1,4 +1,4 @@
-package ru.radius17.entity;
+package ru.radius17.reg_auth.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

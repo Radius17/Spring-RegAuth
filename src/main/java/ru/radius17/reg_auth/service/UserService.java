@@ -1,9 +1,9 @@
-package ru.radius17.service;
+package ru.radius17.reg_auth.service;
 
-import ru.radius17.entity.Role;
-import ru.radius17.entity.User;
-import ru.radius17.repository.RoleRepository;
-import com.boots.repository.UserRepository;
+import ru.radius17.reg_auth.entity.Role;
+import ru.radius17.reg_auth.entity.User;
+import ru.radius17.reg_auth.repository.RoleRepository;
+import ru.radius17.reg_auth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,4 +1,4 @@
-package ru.radius17.config;
+package ru.radius17.reg_auth.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

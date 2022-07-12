@@ -1,6 +1,6 @@
-package ru.radius17.controller;
+package ru.radius17.reg_auth.controller;
 
-import com.boots.service.UserService;
+import ru.radius17.reg_auth.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

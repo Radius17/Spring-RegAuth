@@ -1,4 +1,4 @@
-package ru.radius17;
+package ru.radius17.reg_auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

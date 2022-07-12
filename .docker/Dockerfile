@@ -1,3 +1,3 @@
 # Base image
-FROM radius17/openjdk-8:latest
+FROM radius17/openjdk-11:latest
 #####################################################################################
