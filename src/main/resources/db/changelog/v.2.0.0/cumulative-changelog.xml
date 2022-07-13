@@ -8,6 +8,8 @@
         <tagDatabase tag="v.2.0.0"/>
     </changeSet>
 
-    <include file="create-table-user_roles.xml" relativeToChangelogFile="true"/>
+    <include file="insert-values-roles.xml" relativeToChangelogFile="true"/>
+    <include file="insert-values-users.xml" relativeToChangelogFile="true"/>
+    <include file="insert-values-user_roles.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

@@ -10,5 +10,5 @@
 
     <include file="create-table-role.xml" relativeToChangelogFile="true"/>
     <include file="create-table-user.xml" relativeToChangelogFile="true"/>
-    <include file="insert-values-roles.xml" relativeToChangelogFile="true"/>
+    <include file="create-table-user_roles.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
