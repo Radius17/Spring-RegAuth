@@ -5,7 +5,8 @@
 <%! String page_title="Главная"; %>
 <%@include file="includes/header.jsp" %>
 
-<div>
+<div class="main-wrapper">
+
   <h3>${pageContext.request.userPrincipal.name}</h3>
   <sec:authorize access="!isAuthenticated()">
     <h4><a href="/login">Войти</a></h4>

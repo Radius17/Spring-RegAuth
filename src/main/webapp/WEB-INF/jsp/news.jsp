@@ -4,9 +4,11 @@
 <%! String page_title="Новости"; %>
 <%@include file="includes/header.jsp" %>
 
-<div>
+<div class="main-wrapper">
     <h2>Новости <br> Только для залогинившихся пользователей.</h2>
-    <a href="/">Главная</a>
+    <div class="link-row">
+        <a href="/"><<< На главную</a>
+    </div>
 </div>
 
 <%@include file="includes/footer.jsp" %>

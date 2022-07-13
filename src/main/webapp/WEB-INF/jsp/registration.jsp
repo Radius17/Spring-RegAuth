@@ -5,42 +5,46 @@
 <%! String page_title="Регистрация"; %>
 <%@include file="includes/header.jsp" %>
 
-<div>
+<div class="main-wrapper">
   <form:form method="POST" modelAttribute="userForm">
     <h2>Регистрация</h2>
-    <div>
-      <form:input type="text" path="username" placeholder="Username"
+    <div class="form-row">
+      <form:input type="text" path="username" placeholder="Логин"
                   autofocus="true"></form:input>
       <form:errors path="username"></form:errors>
         ${usernameError}
     </div>
-    <div>
-      <form:input type="password" path="password" placeholder="Password"></form:input>
+    <div class="form-row">
+      <form:input type="password" path="password" placeholder="Пароль"></form:input>
     </div>
-    <div>
+    <div class="form-row">
       <form:input type="password" path="passwordConfirm"
-                  placeholder="Confirm your password"></form:input>
+                  placeholder="Подтверждение пароля"></form:input>
       <form:errors path="password"></form:errors>
         ${passwordError}
     </div>
-    <div>
-      <form:input type="text" path="nickname" placeholder="Nickname"></form:input>
+    <div class="form-row">
+      <form:input type="text" path="nickname" placeholder="Ник"></form:input>
       <form:errors path="nickname"></form:errors>
         ${nicknameError}
     </div>
-    <div>
-      <form:input type="phone" path="phone" placeholder="Phone"></form:input>
+    <div class="form-row">
+      <form:input type="phone" path="phone" placeholder="Телефон"></form:input>
       <form:errors path="phone"></form:errors>
         ${phoneError}
     </div>
-    <div>
+    <div class="form-row">
       <form:input type="email" path="email" placeholder="E-mail"></form:input>
       <form:errors path="email"></form:errors>
         ${emailError}
     </div>
-    <button type="submit">Зарегистрироваться</button>
+    <div class="form-row form-buttons-row">
+      <button type="submit">Зарегистрироваться</button>
+    </div>
   </form:form>
-  <a href="/">Главная</a>
+  <div class="link-row">
+    <a href="/"><<< На главную</a>
+  </div>
 </div>
 
 <%@include file="includes/footer.jsp" %>

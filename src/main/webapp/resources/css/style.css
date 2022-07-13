@@ -1,3 +1,36 @@
 body {
     background: #FFFFA8;
 }
+.main-wrapper{
+    width:960px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.form-row,
+.list-row{
+    display: block;
+    padding-bottom: 15px;
+}
+.form-row input{
+    width: 100%;
+    padding:4px;
+}
+form button{
+    padding:4px 15px;
+}
+.form-buttons-row{
+    text-align: center;
+}
+.list-row table{
+}
+.list-row table tr{
+
+}
+.list-row table tr th,
+.list-row table tr td{
+    border: 1px solid;
+    padding:5px;
+}
+.list-row table tr td{
+
+}

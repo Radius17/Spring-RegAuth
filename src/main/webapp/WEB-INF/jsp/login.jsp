@@ -7,16 +7,20 @@
 <sec:authorize access="isAuthenticated()">
   <% response.sendRedirect("/"); %>
 </sec:authorize>
-<div>
+<div class="main-wrapper">
   <form method="POST" action="/login">
     <h2>Вход в систему</h2>
-    <div>
-      <input name="username" type="text" placeholder="Username"
+    <div class="form-row">
+      <input name="username" type="text" placeholder="Логин"
              autofocus="true"/>
-      <input name="password" type="password" placeholder="Password"/>
-      <button type="submit">Log In</button>
-      <h4><a href="/registration">Зарегистрироваться</a></h4>
     </div>
+    <div class="form-row">
+      <input name="password" type="password" placeholder="Пароль"/>
+    </div>
+    <div class="form-row form-buttons-row">
+      <button type="submit">Войти</button>
+    </div>
+    <h4><a href="/registration">Зарегистрироваться</a></h4>
   </form>
 </div>
 
