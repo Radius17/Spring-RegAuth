@@ -23,6 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
+        /*
         httpSecurity
                 .csrf()
                     .disable()
@@ -31,9 +32,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/registration").not().fullyAuthenticated()
                     //Доступ только для пользователей с ролью Администратор
                     .antMatchers("/admin/**").hasRole("ADMIN")
-                    .antMatchers("/news").hasRole("USER")
+                    .antMatchers("/profile").hasRole("USER")
+                    //.antMatchers("/news").hasRole("USER")
                     //Доступ разрешен всем пользователей
-                    .antMatchers("/", "/resources/**").permitAll()
+                    .antMatchers("/", "/news", "/resources/**").permitAll()
                 //Все остальные страницы требуют аутентификации
                 .anyRequest().authenticated()
                 .and()
@@ -47,6 +49,23 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .logout()
                     .permitAll()
                     .logoutSuccessUrl("/");
+        */
+        httpSecurity.csrf().disable();
+        //Доступ только для не зарегистрированных пользователей
+        httpSecurity.authorizeRequests().antMatchers("/registration").not().fullyAuthenticated();
+        //Доступ только для пользователей с ролью Администратор
+        httpSecurity.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN");
+        //Доступ только для пользователей с ролью Пользователь
+        httpSecurity.authorizeRequests().antMatchers("/profile").hasRole("USER");
+        //Доступ разрешен всем подряд
+        httpSecurity.authorizeRequests().antMatchers("/", "/news", "/resources/**").permitAll();
+        //Все остальные страницы требуют аутентификации
+        httpSecurity.authorizeRequests().anyRequest().authenticated();
+//      .and()
+        //Настройка для входа в систему и перенарпавление на главную страницу после успешного входа
+        httpSecurity.formLogin().loginPage("/login").defaultSuccessUrl("/").permitAll();
+        // Настройки для выхода из системы
+        httpSecurity.logout().permitAll().logoutSuccessUrl("/").deleteCookies("JSESSIONID");
     }
 
     @Autowired
