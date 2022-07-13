@@ -5,7 +5,7 @@
 <%@include file="includes/header.jsp" %>
 
 <div class="main-wrapper">
-    <h2>Новости <br> Только для залогинившихся пользователей.</h2>
+    <h2>Новости.<br>Видно всем подряд.</h2>
     <div class="link-row">
         <a href="/"><<< На главную</a>
     </div>

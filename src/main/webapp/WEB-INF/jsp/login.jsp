@@ -20,7 +20,13 @@
     <div class="form-row form-buttons-row">
       <button type="submit">Войти</button>
     </div>
-    <h4><a href="/registration">Зарегистрироваться</a></h4>
+    <div class="link-row">
+      <a href="/registration">Зарегистрироваться >>></a>
+    </div>
+    <div class="link-row">
+      <a href="/"><<< На главную</a>
+    </div>
+
   </form>
 </div>
 
