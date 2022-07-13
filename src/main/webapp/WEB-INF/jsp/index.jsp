@@ -18,7 +18,7 @@
       <h3>Здравствуйте, ${pageContext.request.userPrincipal.name} !</h3>
       <h4><a href="/profile">Профиль</a></h4>
       <sec:authorize access="hasRole('ADMIN')">
-        <h4><a href="/admin">Пользователи</a></h4>
+        <h4><a href="/admin/users">Пользователи</a></h4>
       </sec:authorize>
       <h4><a href="/logout">Выйти</a></h4>
     </sec:authorize>
@@ -26,7 +26,7 @@
   <fieldset>
     <legend>Пробные ссылки</legend>
     <h4><a href="/profile">Профиль (только пользователи)</a></h4>
-    <h4><a href="/admin">Пользователи (только админ)</a></h4>
+    <h4><a href="/admin/users">Пользователи (только админ)</a></h4>
   </fieldset>
 </div>
 

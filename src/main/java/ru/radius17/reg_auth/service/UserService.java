@@ -44,11 +44,20 @@ public class UserService implements UserDetailsService {
         return userFromDb.orElse(new User());
     }
 
+    public User findUserByUsername(String username) {
+        User userFromDb = userRepository.findByUsername(username);
+        if (userFromDb == null) {
+            throw new UsernameNotFoundException("User not found by name");
+        }
+        return userFromDb;
+    }
+
     public List<User> allUsers() {
         return userRepository.findAll();
     }
 
-    public boolean saveUser(User user) {
+    public boolean addUser(User user) {
+        //@TODO Обработка ошибок уникальности полей
         User userFromDB = userRepository.findByUsername(user.getUsername());
 
         if (userFromDB != null) {
@@ -60,7 +69,6 @@ public class UserService implements UserDetailsService {
         userRepository.save(user);
         return true;
     }
-
     public boolean deleteUser(Long userId) {
         if (userRepository.findById(userId).isPresent()) {
             userRepository.deleteById(userId);
@@ -68,9 +76,10 @@ public class UserService implements UserDetailsService {
         }
         return false;
     }
-
+/*
     public List<User> usergtList(Long idMin) {
         return em.createQuery("SELECT u FROM User u WHERE u.id > :paramId", User.class)
                 .setParameter("paramId", idMin).getResultList();
     }
+ */
 }

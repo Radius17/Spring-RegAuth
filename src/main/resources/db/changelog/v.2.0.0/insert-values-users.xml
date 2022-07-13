@@ -11,7 +11,7 @@
             <column name="password" value="$2a$10$UGKGLwFeD0TUQ8GHKDAOhOBTP23hjAP0SAiJTpwttaPs6jbGg8jna"/>
             <column name="nickname" value="Administrator"/>
             <column name="email" value="admin@localhost"/>
-            <column name="phone" value=""/>
+            <column name="phone" value="1111111111"/>
             <column name="comments" value="No comments for admin"/>
         </insert>
         <insert tableName="t_user">
@@ -20,7 +20,7 @@
             <column name="password" value="$2a$10$UGKGLwFeD0TUQ8GHKDAOhOBTP23hjAP0SAiJTpwttaPs6jbGg8jna"/>
             <column name="nickname" value="User"/>
             <column name="email" value="user@localhost"/>
-            <column name="phone" value=""/>
+            <column name="phone" value="2222222222"/>
             <column name="comments" value="No comments for user"/>
         </insert>
 

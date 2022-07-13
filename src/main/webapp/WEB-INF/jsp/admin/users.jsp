@@ -1,8 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 
-<%! String page_title="Администрирование"; %>
-<%@include file="includes/header.jsp" %>
+<%! String page_title="Администрирование пользователей"; %>
+<%@include file="../includes/header.jsp" %>
 
 <div class="main-wrapper">
   <div class="list-row">
@@ -23,7 +23,7 @@
             <c:forEach items="${user.roles}" var="role">${role.name}; </c:forEach>
           </td>
           <td>
-            <form action="${pageContext.request.contextPath}/admin" method="post">
+            <form action="${pageContext.request.contextPath}/admin/users" method="post">
               <input type="hidden" name="userId" value="${user.id}"/>
               <input type="hidden" name="action" value="delete"/>
               <button type="submit">Удалить</button>
@@ -38,4 +38,4 @@
   </div>
 </div>
 
-<%@include file="includes/footer.jsp" %>
+<%@include file="../includes/footer.jsp" %>
