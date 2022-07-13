@@ -26,7 +26,7 @@ public class WebSecurityConfig {
         //Доступ только для пользователей с ролью Пользователь
         httpSecurity.authorizeRequests().antMatchers("/profile").hasRole("USER");
         //Доступ разрешен всем подряд
-        httpSecurity.authorizeRequests().antMatchers("/", "/news", "/resources/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/", "/resources/**").permitAll();
         //Все остальные страницы требуют аутентификации
         httpSecurity.authorizeRequests().anyRequest().authenticated();
         //Настройка для входа в систему и перенарпавление на главную страницу после успешного входа
